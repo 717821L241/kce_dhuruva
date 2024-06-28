@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/register.png">
+</head>
+
+<body style="background-image: url(img/back.avif); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <header class="head"><h1>Karpagam College Of Engineering-Coimbatore</h1></header>
+<center>
+    <div class="container">
+    <div class="reg">
+        <h2>Registration</h2>
+    </div>
+    <form class="form">
+        <table style="padding: 10px;">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" id="Name" name="Name" required placeholder="Enter your Name"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" id="Age" name="Age" required placeholder="Enter your Age"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" name="Gender" id="Gender">Male
+                <input type="radio" name="Gender" id="Gender">Female
+            </td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" id="Email" name="Email" required placeholder="Enter your Email"></td>
+            </tr>
+            <tr>
+                <td>Mobile Number:</td>
+                <td><input type="text" id="MobileNumber" name="MobileNumber" placeholder="Enter your Number" required></td>
+            </tr>
+            <!-- <tr>
+                <td>Select the Event:</td>
+                <td>
+                    <select class="select">
+                        <option>Choose</option>
+                        <option>Dance</option>
+                        <option>Singing</option>
+                        <option>Project</option>
+                        <option>Workshop</option>
+                        <option>Hackathon</option>
+                        <option>Presentations</option>
+                    </select>
+                </td>
+            </tr> -->
+            <tr>
+                <td>Select Pass:</td>
+                <td>
+                    <select class="select">
+                        <option>Choose</option>
+                        <option>Elite</option>
+                        <option>Gold</option>
+                        <option>Sliver</option>
+                        <option>Normal</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+   
+</div>
+<button onclick="register()">Register</button>
+</center>
+<center>
+<div class="events">
+    <div class="pass">
+        <h2>Event Pass</h2>
+    </div>
+    <h4>Elite Pass - Rs.500<p>(Workshop, Hackathon, Presentations)</p></h4>
+    <h4>Gold Pass - Rs.300<p>(Workshop or Hackathon, Presentation)</p></h4>
+    <h4>Sliver Pass - Rs.250<p>(Presentation, Project)</p></h4>
+    <h4>Normal Pass - Rs.200<p>(Per-event)</p></h4>
+</div>
+</center>
+
+</body>
+
+<script>
+    function register() {
+        // Get form values
+        var participantName = document.getElementById('Name').value;
+        var Age = document.getElementById('Age').value;
+     //   var Gender = document.getElementById('Gender').value;
+        var email = document.getElementById('Email').value;
+        var Number = document.getElementById('MobileNumber').value;
+        // Validate the form (you can add more validation)
+        if (!participantName || !Age || !Gender || !email || !Number) {
+            alert('Please fill in all fields');
+            return;
+        }
+        alert('Registration successful:\nName: ' + participantName + '\nEmail: ' + email + '\nAge: ' + Age + '\nMobile Number: ' + Number);
+
+    }
+</script>
+</html>
